@@ -1,0 +1,448 @@
+/*
+ * Stylesheet for Advocatenkantoor van Dijk–Silos (VDS Law Firm) website.
+ *
+ * This file defines a cohesive design system using CSS variables, responsive
+ * layout techniques, and modern typography. The colour palette is inspired
+ * by classic legal motifs: a deep blue for trust and professionalism and a
+ * warm gold accent for sophistication. The layout is built with flexbox and
+ * CSS grid to gracefully adapt to various screen sizes.
+ */
+
+/* Root variables for easy theming */
+:root {
+  --color-primary: #0a3b58; /* dark blue */
+  --color-secondary: #d9a217; /* golden accent */
+  --color-light: #f7f9fb; /* very light background */
+  --color-dark: #122c43; /* darker tone for footer */
+  --color-text: #333333; /* body text */
+  --color-white: #ffffff;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Inter', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Utility wrapper to constrain content width */
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top bar */
+.top-bar {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.85rem;
+}
+
+.top-bar .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.top-bar .contact span {
+  margin-right: 1rem;
+}
+
+.top-bar .contact i {
+  margin-right: 0.3rem;
+}
+
+.top-bar .social a {
+  color: var(--color-white);
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+  transition: color var(--transition-speed);
+}
+
+.top-bar .social a:hover {
+  color: var(--color-secondary);
+}
+
+/* Header / Navigation */
+.header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo span {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0.25rem 0;
+  transition: color var(--transition-speed);
+}
+
+.nav-links li a:hover {
+  color: var(--color-secondary);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 59, 88, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #b88b13;
+  color: var(--color-white);
+}
+
+/* About section */
+.about {
+  padding: 4rem 0;
+}
+
+.about h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.about p + p {
+  margin-top: 1rem;
+}
+
+.about a {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* Practice areas */
+.practice {
+  background-color: var(--color-white);
+  padding: 4rem 0;
+}
+
+.practice h2 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.practice p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.practice-item {
+  background-color: var(--color-light);
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-speed);
+}
+
+.practice-item i {
+  font-size: 1.8rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.practice-item span {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.practice-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Team section */
+.team {
+  padding: 4rem 0;
+}
+
+.team h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.member {
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform var(--transition-speed);
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.member h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.member .role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.member .bio {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.member:hover {
+  transform: translateY(-4px);
+}
+
+/* Contact section */
+.contact {
+  background-color: var(--color-white);
+  padding: 4rem 0;
+}
+
+.contact h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.contact-details i {
+  color: var(--color-secondary);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form .form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.contact-form .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccd5df;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form .btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid #e2e8f0;
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .practice-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .contact-form .form-row {
+    flex-direction: column;
+  }
+}
