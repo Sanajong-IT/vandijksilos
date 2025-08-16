@@ -1,0 +1,12 @@
+{
+  "name": "vandijksilos",
+  "version": "1.0.0",
+  "description": "Static site for Advocatenkantoor van Dijk–Silos",
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"public/**/*.js\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
