@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,6 +30,9 @@
         <span><i class="fas fa-envelope"></i> <a href="mailto:info@vdslawfirm.com">info@vdslawfirm.com</a></span>
       </div>
       <div class="social">
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+          <i class="fas fa-globe"></i> <span id="lang-text">EN</span>
+        </button>
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
@@ -44,11 +47,11 @@
         <img src="images/vds_logo.png" alt="VDS Law Firm" />
       </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Over&nbsp;Ons</a></li>
-        <li><a href="#practice">Rechtsgebieden</a></li>
-        <li><a href="#team">Ons&nbsp;Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about" data-i18n="nav.about">Over&nbsp;Ons</a></li>
+        <li><a href="#practice" data-i18n="nav.practice">Rechtsgebieden</a></li>
+        <li><a href="#team" data-i18n="nav.team">Ons&nbsp;Team</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <button class="menu-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
@@ -60,18 +63,18 @@
   <section id="home" class="hero" style="background-image: url('images/hero.png');">
     <div class="overlay"></div>
     <div class="hero-content wrapper">
-      <h1>Legal Expertise with You in Mind</h1>
-      <p>
+      <h1 data-i18n="hero.title">Legal Expertise with You in Mind</h1>
+      <p data-i18n="hero.subtitle">
         Advocatenkantoor van&nbsp;Dijk–Silos (VDS Law Firm) biedt al meer dan twintig
         jaar deskundige juridische diensten in Suriname en daarbuiten.
       </p>
-      <a href="#contact" class="btn btn-primary">Contacteer&nbsp;Ons</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Contacteer&nbsp;Ons</a>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about wrapper">
-    <h2>Over&nbsp;Ons</h2>
+    <h2 data-i18n="about.title">Over&nbsp;Ons</h2>
     <p>
       VDS&nbsp;Law&nbsp;Firm, ook bekend als ‘Advocatenkantoor van&nbsp;Dijk–Silos’, is een
       advocatenkantoor dat meer dan twintig jaar gespecialiseerd is in
@@ -80,7 +83,7 @@
       hebben we cliënten en referenties opgebouwd in Suriname en vele andere
       landen.
     </p>
-    <p>
+    <p data-i18n="about.p2">
       Onze uitgebreide samenstelling van specialisaties stelt ons in staat om
       vrijwel alle soorten zaken te behandelen: van eenvoudig juridisch advies,
       onderhandelingen en het opstellen van overeenkomsten tot de volledige
@@ -94,48 +97,48 @@
   <!-- Practice Areas Section -->
   <section id="practice" class="practice">
     <div class="wrapper">
-      <h2>Rechtsgebieden</h2>
-      <p>Onze dienstverlening raakt onder andere de volgende rechtsgebieden:</p>
+      <h2 data-i18n="practice.title">Rechtsgebieden</h2>
+      <p data-i18n="practice.subtitle">Onze dienstverlening raakt onder andere de volgende rechtsgebieden:</p>
       <div class="practice-grid">
         <div class="practice-item">
           <i class="fas fa-file-contract"></i>
-          <span>Contractenrecht</span>
+          <span data-i18n="practice.contract">Contractenrecht</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-briefcase"></i>
-          <span>Handelsrecht</span>
+          <span data-i18n="practice.commercial">Handelsrecht</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-balance-scale"></i>
-          <span>(Oneerlijke) concurrentie</span>
+          <span data-i18n="practice.competition">(Oneerlijke) concurrentie</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-globe"></i>
-          <span>Internationaal recht</span>
+          <span data-i18n="practice.international">Internationaal recht</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-users"></i>
-          <span>Personen &amp; familierecht</span>
+          <span data-i18n="practice.family">Personen &amp; familierecht</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-home"></i>
-          <span>Huurrecht</span>
+          <span data-i18n="practice.rent">Huurrecht</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-cubes"></i>
-          <span>Zakenrecht</span>
+          <span data-i18n="practice.property">Zakenrecht</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-building"></i>
-          <span>Corporate&nbsp;Law</span>
+          <span data-i18n="practice.corporate">Corporate&nbsp;Law</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-user-tie"></i>
-          <span>Arbeidsrecht</span>
+          <span data-i18n="practice.labor">Arbeidsrecht</span>
         </div>
         <div class="practice-item">
           <i class="fas fa-hand-holding-usd"></i>
-          <span>Schuldvorderingen</span>
+          <span data-i18n="practice.debt">Schuldvorderingen</span>
         </div>
       </div>
     </div>
@@ -143,13 +146,13 @@
 
   <!-- Team Section -->
   <section id="team" class="team wrapper">
-    <h2>Ons&nbsp;Team</h2>
+    <h2 data-i18n="team.title">Ons&nbsp;Team</h2>
     <div class="team-grid">
       <a href="jennifer-van-dijk-silos.html" class="member">
         <img src="images/portrait1.png" alt="Mr. Dr. Jennifer V. van Dijk–Silos" />
         <h3>Mr.&nbsp;Dr.&nbsp;Jennifer&nbsp;V.&nbsp;van&nbsp;Dijk–Silos</h3>
         <p class="role">Founding&nbsp;Partner</p>
-        <p class="bio">
+        <p class="bio" data-i18n="team.jennifer.bio">
         Mr.&nbsp;Dr.&nbsp;Jennifer&nbsp;van&nbsp;Dijk–Silos werd geboren op 13&nbsp;december
           1954 in Suriname en behaalde haar bachelors in Spaans en rechten aan
           de Rijksuniversiteit van Groningen (Nederland) in 1978; haar
@@ -162,7 +165,7 @@
         <img src="images/portrait1.png" alt="Mr. Nailah U. van Dijk" />
         <h3>Mr.&nbsp;Nailah&nbsp;U.&nbsp;van&nbsp;Dijk</h3>
         <p class="role">Managing&nbsp;Partner</p>
-        <p class="bio">
+        <p class="bio" data-i18n="team.nailah.bio">
           Nailah&nbsp;U.&nbsp;van&nbsp;Dijk is advocaat en managing partner bij
           Lawfirm&nbsp;van&nbsp;Dijk–Silos. Zij behaalde haar master in de
           rechtsgeleerdheid aan de Anton de Kom Universiteit van Suriname in
@@ -177,8 +180,8 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="wrapper">
-      <h2>Contact</h2>
-      <p>We care about your case as much as you do. Neem vandaag nog contact met ons op.</p>
+      <h2 data-i18n="contact.title">Contact</h2>
+      <p data-i18n="contact.subtitle">We care about your case as much as you do. Neem vandaag nog contact met ons op.</p>
       <div class="contact-details">
         <p>
           <i class="fas fa-map-marker-alt"></i>
@@ -186,7 +189,11 @@
         </p>
         <p>
           <i class="fas fa-phone-alt"></i>
-          +597&nbsp;420837
+          <span data-i18n="contact.phone">Telefoon:</span> +597&nbsp;420837
+        </p>
+        <p>
+          <i class="fas fa-fax"></i>
+          <span data-i18n="contact.fax">Fax:</span> +597&nbsp;420840
         </p>
         <p>
           <i class="fas fa-envelope"></i>
@@ -196,19 +203,19 @@
       <form class="contact-form" id="contact-form">
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Naam</label>
-            <input type="text" id="name" name="name" placeholder="Uw naam" required />
+            <label for="name" data-i18n="contact.form.name">Naam</label>
+            <input type="text" id="name" name="name" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Uw naam" required />
           </div>
           <div class="form-group">
-            <label for="email">E‑mail</label>
-            <input type="email" id="email" name="email" placeholder="Uw e‑mail" required />
+            <label for="email" data-i18n="contact.form.email">E‑mail</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="Uw e‑mail" required />
           </div>
         </div>
         <div class="form-group">
-          <label for="message">Bericht</label>
-          <textarea id="message" name="message" placeholder="Uw bericht" rows="5" required></textarea>
+          <label for="message" data-i18n="contact.form.message">Bericht</label>
+          <textarea id="message" name="message" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Uw bericht" rows="5" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Verzenden</button>
+        <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Verzenden</button>
       </form>
     </div>
   </section>
@@ -216,9 +223,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="wrapper">
-      <p>
-  &copy; <span id="year"></span> Advocatenkantoor van&nbsp;Dijk–Silos. Alle rechten voorbehouden.
-</p>
+      <p data-i18n="footer.copyright">&copy;&nbsp;2025 Advocatenkantoor van&nbsp;Dijk–Silos. Alle rechten voorbehouden.</p>
     </div>
   </footer>
 
