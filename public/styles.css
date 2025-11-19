@@ -75,6 +75,24 @@ a:focus {
   margin-right: 0.3rem;
 }
 
+.top-bar .lang-toggle {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  margin-left: 0;
+  margin-right: 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color var(--transition-speed);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}
+
+.top-bar .lang-toggle:hover {
+  color: var(--color-secondary);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .top-bar .social a {
   color: var(--color-white);
   margin-left: 0.5rem;
