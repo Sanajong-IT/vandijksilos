@@ -4,7 +4,7 @@
 // contact form submission to display a confirmation message instead of
 // actually sending data (since back‑end processing is outside the scope
 // of this prototype).
-
+document.getElementById('year').textContent = new Date().getFullYear();
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile navigation toggle
   const menuToggle = document.querySelector('.menu-toggle');
