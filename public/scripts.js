@@ -51,6 +51,8 @@ const translations = {
     contact: {
       title: 'Contact',
       subtitle: 'We care about your case as much as you do. Neem vandaag nog contact met ons op.',
+      phone: 'Telefoon:',
+      fax: 'Fax:',
       form: {
         name: 'Naam',
         namePlaceholder: 'Uw naam',
@@ -110,6 +112,8 @@ const translations = {
     contact: {
       title: 'Contact',
       subtitle: 'We care about your case as much as you do. Contact us today.',
+      phone: 'Phone:',
+      fax: 'Fax:',
       form: {
         name: 'Name',
         namePlaceholder: 'Your name',
