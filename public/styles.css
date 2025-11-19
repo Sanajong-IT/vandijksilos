@@ -120,10 +120,10 @@ a:focus {
   padding: 1rem 0;
 }
 
-.logo span {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--color-primary);
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {

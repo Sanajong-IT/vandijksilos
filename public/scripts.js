@@ -127,6 +127,7 @@ const translations = {
   }
 };
 
+document.getElementById('year').textContent = new Date().getFullYear();
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize language from localStorage or default to Dutch
   let currentLang = localStorage.getItem('language') || 'nl';
