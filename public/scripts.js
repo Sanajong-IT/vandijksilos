@@ -36,12 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Contact form submission handler
   const form = document.getElementById('contact-form');
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    // Provide a simple confirmation message to the user
-    alert('Bedankt voor uw bericht! We nemen zo spoedig mogelijk contact met u op.');
-    // Reset the form
-    form.reset();
-  });
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      // Provide a simple confirmation message to the user
+      alert('Bedankt voor uw bericht! We nemen zo spoedig mogelijk contact met u op.');
+      // Reset the form
+      form.reset();
+    });
+  }
 });
 
